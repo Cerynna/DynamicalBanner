@@ -15,5 +15,6 @@ exemple:
 
 ```
 
+Je t'ai laissé mes table sqlite pour pas que tu passe 1 heure a tout refaire lol.
 
 **Des bisous amuse toi bien.**
