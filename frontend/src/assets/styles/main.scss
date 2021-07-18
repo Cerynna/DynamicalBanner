@@ -1,0 +1,162 @@
+@import "./reset";
+$color1: #2f4858;
+$color2: #3b5281;
+$color3: #775099;
+$color4: #be3b8d;
+$color5: #f2255e;
+$color6: #ff5000;
+
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+
+* {
+  font-family: "Otomanopee One", sans-serif;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-image: linear-gradient(to right bottom, $color1, $color2, $color3);
+  min-height: calc(100vh - 20vh);
+  min-width: calc(100vw - 20px);
+  padding: 10vh 0;
+  h1 {
+    font-size: 2em;
+    color: $color6;
+  }
+  h3 {
+    font-size: 1.4em;
+    color: $color6;
+    text-align: center;
+  }
+  hr {
+    height: 50px;
+    border: none;
+  }
+
+  label {
+    color: $color1;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="password"] {
+    background: none;
+    color: $color1;
+    padding: 10px 20px 5px 20px;
+    border: none;
+    border-bottom: 5px solid $color1;
+    text-align: center;
+    font-size: 1em;
+    transition: all 200ms ease-in-out;
+    &:disabled {
+      background-color: rgba($color1, 0.2);
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 5px solid $color6;
+      color: $color6;
+      &::placeholder {
+        color: rgba($color3, 0);
+      }
+    }
+  }
+  input[type="number"]{
+    padding: 10px 0 5px 0;
+  }
+  select {
+    background: none;
+    color: $color1;
+    padding: 10px 0 5px 0;
+    border: none;
+    border-bottom: 5px solid $color1;
+    text-align: center;
+    font-size: 1em;
+    transition: all 200ms ease-in-out;
+    &:focus {
+      outline: none;
+    }
+  }
+  .btn {
+    box-shadow: rgba($color3, 0) 0px 4px 10px 0px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: $color6;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    font-size: 1em;
+    padding: 10px;
+    &:hover {
+      background-color: $color2;
+      color: $color6;
+      box-shadow: $color6 0px 4px 10px 0px;
+    }
+    &[data-color="dark"] {
+      background-color: rgba($color1, 0);
+      color: lighten($color1, 2%);
+      &:hover {
+        background-color: rgba($color1, 0);
+        color: $color6;
+        box-shadow: rgba($color1, 0) 0px 4px 10px 0px;
+      }
+    }
+    &[data-type="square"] {
+      padding: none;
+    }
+    &[data-scale="small"] {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 20px;
+    }
+    &[data-scale="large"] {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 30px;
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    border-radius: 5px;
+    background-color: lighten($color3, 40%);
+    border: 2px solid $color6;
+    box-shadow: $color6 0px 4px 10px 0px;
+    padding: 20px;
+    row-gap: 20px;
+    .twitter,
+    .instagram {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .tools {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}

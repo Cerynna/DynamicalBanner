@@ -1,0 +1,14 @@
+{
+  "name": "DynamicalBanner",
+  "version": "1.0.0",
+  "main": "backend/server.js",
+  "license": "MIT",
+  "scripts": {
+    "start:front": "cd frontend && yarn start",
+    "start:back": "cd backend && nodemon server.js",
+    "install": "sh scripts/install.sh",
+    "dev": "concurrently -n back,front \"yarn start:back\" \"yarn start:front\"",
+    "start": "cd backend & node server.js",
+    "build": "cd frontend && yarn build"
+  }
+}
